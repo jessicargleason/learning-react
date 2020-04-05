@@ -15,10 +15,18 @@
     <body>
         <div id="root"></div>
         <script type="text/babel">
-            let city = "Madrid";
+            const Hello = () => { //you have to capitalize the name of the component
+                return (
+                <div className="heading">
+                    <h1>Welcome to React</h1>
+                </div>
+                )
+            };
+
+            /* There are different ways to write the component, including no brackets or return, only parentheses and no return... */
 
             ReactDOM.render(
-                <h1 className="heading">Hello {city}</h1>,
+                <Hello />,
                 document.getElementById("root")
             );
         </script>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>React Project</title>
+        <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/javascript">
+            ReactDOM.render(
+                React.createElement(
+                    "div", //type of element
+                    null, //any properties
+                    //children
+                    React.createElement(
+                        "h1",
+                        null,
+                        "Oh hello!"
+                    )
+                 ),
+                document.getElementById("root")
+            );
+        </script>
+    </body>
+</html>

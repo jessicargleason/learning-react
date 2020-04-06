@@ -15,10 +15,12 @@
     <body>
         <div id="root"></div>
         <script type="text/babel">
-            const Hello = () => { //you have to capitalize the name of the component
+            const Hello = (props) => { //you have to capitalize the name of the component
+                console.log(props);
                 return (
                 <div className="heading">
-                    <h1>Welcome to React</h1>
+                    <h1>Welcome to {props.library}</h1>
+                    <p>{props.message}</p>
                 </div>
                 )
             };
@@ -26,7 +28,7 @@
             /* There are different ways to write the component, including no brackets or return, only parentheses and no return... */
 
             ReactDOM.render(
-                <Hello />,
+                <Hello library="React" message="Enjoy!" />,
                 document.getElementById("root")
             );
         </script>

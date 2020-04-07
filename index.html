@@ -15,19 +15,20 @@
     <body>
         <div id="root"></div>
         <script type="text/babel">
-            const Hello = ({library, message}) => { //you have to capitalize the name of the component
-                return (
-                <div className="heading">
-                    <h1>Welcome to {library}</h1>
-                    <p>{message}</p>
-                </div>
-                )
-            };
+            const Lake = ({name}) => <li>{name}</li>;
+
+            const App = () => (
+                <ul>
+                    <Lake name="Lake Tahoe" />
+                    <Lake name="Lake Michigan" />
+                    <Lake name="Angora Lake" />
+                </ul>
+            )
 
             /* There are different ways to write the component, including no brackets or return, only parentheses and no return... */
 
             ReactDOM.render(
-                <Hello library="React" message="Enjoy!" />,
+                <App />,
                 document.getElementById("root")
             );
         </script>

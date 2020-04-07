@@ -18,18 +18,22 @@
             const Lake = ({name}) => <li>{name}</li>;
 
             class App extends React.Component {
+                state = {
+                    loggedIn: true
+                }
                 render() {
                     return (
-                        <ul>
-                            <Lake name="Lake Tahoe" />
-                            <Lake name="Lake Michigan" />
-                            <Lake name="Angora Lake" />
-                        </ul>
+                        <div>
+                            <p>The user is {this.state.loggedIn ? "logged in" : "logged out"}</p>
+                            <ul>
+                                <Lake name="Lake Tahoe" />
+                                <Lake name="Lake Michigan" />
+                                <Lake name="Angora Lake" />
+                            </ul>
+                        </div>
                     )
                 }
             }
-
-            /* There are different ways to write the component, including no brackets or return, only parentheses and no return... */
 
             ReactDOM.render(
                 <App />,

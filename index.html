@@ -17,13 +17,17 @@
         <script type="text/babel">
             const Lake = ({name}) => <li>{name}</li>;
 
-            const App = () => (
-                <ul>
-                    <Lake name="Lake Tahoe" />
-                    <Lake name="Lake Michigan" />
-                    <Lake name="Angora Lake" />
-                </ul>
-            )
+            class App extends React.Component {
+                render() {
+                    return (
+                        <ul>
+                            <Lake name="Lake Tahoe" />
+                            <Lake name="Lake Michigan" />
+                            <Lake name="Angora Lake" />
+                        </ul>
+                    )
+                }
+            }
 
             /* There are different ways to write the component, including no brackets or return, only parentheses and no return... */
 

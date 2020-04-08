@@ -19,12 +19,21 @@
 
             class App extends React.Component {
                 state = {
-                    loggedIn: true
+                    loggedIn: false
                 }
+                logIn = () => this.setState({loggedIn: true})
+                logOut = () => this.setState({loggedIn: false})
                 render() {
                     return (
                         <div>
-                            <p>The user is {this.state.loggedIn ? "logged in" : "logged out"}</p>
+                            <button onClick={this.logIn}>Log In</button>
+                            <button onClick={this.logOut}>Log Out</button>
+                            <p>
+                                The user is {
+                                this.state.loggedIn 
+                                ? "logged in" 
+                                : "logged out"}
+                                </p>
                             <ul>
                                 <Lake name="Lake Tahoe" />
                                 <Lake name="Lake Michigan" />

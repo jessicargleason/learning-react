@@ -15,20 +15,22 @@
     <body>
         <div id="root"></div>
         <script type="text/babel">
-            const Lake = ({name}) => <li>{name}</li>;
-            const SkiResort = ({name}) => <li>{name}</li>;
+            const lakeList = [
+                "Echo Lake", 
+                "Maud Lake", 
+                "Cascade Lake"
+            ];
 
-            const App = ({summer}) => (
+            const App = ({lakes}) => (
                 <ul>
-                    {summer
-                        ? <Lake name="Lake Tahoe" />
-                        : <SkiResort name="Alpine Meadows"/>
-                    }
+                    {lakes.map((lake, i) =>
+                        <li key={i}>{lake}</li>
+                    )}
                 </ul>
             )
 
             ReactDOM.render(
-                <App summer={true} />,
+                <App lakes={lakeList} />,
                 document.getElementById("root")
             );
         </script>

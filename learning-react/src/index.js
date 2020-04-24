@@ -4,11 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const lakeList = [
+  {id: 1, name: "Echo Lake", trailhead: "Echo Lake"}, 
+  {id: 2, name: "Maud Lake", trailhead: "Wright's Lake"}, 
+  {id: 3, name: "Cascade Lake", trailhead: "Bayview"}
+];
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <App lakes={lakeList} />,
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

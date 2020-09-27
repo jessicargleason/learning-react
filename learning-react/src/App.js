@@ -1,24 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 
-class Example extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0
-    };
-  }
+function Example() {
+  //new state variable (count) and function that counts it (setCount) and start with zero
+  const [count, setCount] = useState(0);
 
-  render() {
     return (
       <div>
-        <p>You clicked {this.state.count} times</p>
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+        <p>You clicked {count} times</p>
+        <button onClick={() => setCount( count + 1 )}>
           Click me
         </button>
       </div>
     );
-  }
 }
 
 const App = ({lakes}) => (
